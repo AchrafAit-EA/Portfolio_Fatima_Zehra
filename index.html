@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="description" content="Portfolio de Fatima Ezzahrae - Développeuse Full Stack & Data">
+    <title>Fatima Ezzahrae ✦ Développeuse Full Stack & Data</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-mark">✦</span>
+                <span class="logo-text">Fatima<span>.dev</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" class="nav-item">À propos</a>
+                <a href="#skills" class="nav-item">Compétences</a>
+                <a href="#projects" class="nav-item">Projets</a>
+                <a href="#education" class="nav-item">Formation</a>
+                <a href="#contact" class="nav-item">Contact</a>
+                <a href="#contact" class="btn-mobile-contact">Me Contacter ✉️</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn-nav">Me Contacter</a>
+                <button class="burger" id="burger" aria-label="Menu Mobile">
+                    <span class="bar bar1"></span>
+                    <span class="bar bar2"></span>
+                    <span class="bar bar3"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+
+            <div class="hero-content">
+                <div class="hero-tag-badge">
+                    <span class="tag-pulse"></span>
+                    <span>Disponible pour de nouveaux projets</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Développeuse <span class="highlight-blue">Full Stack</span> & Passionnée de <span class="highlight-amber">Data</span>
+                </h1>
+
+                <p class="hero-desc">
+                    Moi c'est <strong>Fatima Ezzahrae Ait Abdelkader</strong>, étudiante en Licence Pro Développement & Sécurité. Je conçois des plateformes web performantes, ergonomiques et sécurisées.
+                </p>
+
+                <div class="hero-btn-group">
+                    <a href="CV.pdf" download class="btn-primary">
+                        <i class="fas fa-file-arrow-down"></i> Télécharger CV
+                    </a>
+                    <a href="#projects" class="btn-outline">
+                        Voir les projets <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="hero-mini-stats">
+                    <div class="stat-badge">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Maroc</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-badge">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Sécurité & Web</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-badge">
+                        <i class="fas fa-code"></i>
+                        <span>Clean Code</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HERO IMAGE / AVATAR CARD -->
+            <div class="hero-media">
+                <div class="media-card-wrap">
+                    <!-- Background Soft Blobs -->
+                    <div class="soft-circle-bg"></div>
+
+                    <!-- Floating Card Top -->
+                    <div class="float-card float-top">
+                        <div class="float-icon blue"><i class="fas fa-laptop-code"></i></div>
+                        <div>
+                            <h4>Full Stack</h4>
+                            <p>PHP • React • Laravel</p>
+                        </div>
+                    </div>
+
+                    <!-- Main Image Frame -->
+                    <div class="image-frame">
+                        <img src="Img/image.jpeg" alt="Fatima Ezzahrae" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80'">
+                    </div>
+
+                    <!-- Floating Card Bottom -->
+                    <div class="float-card float-bottom">
+                        <div class="float-icon amber"><i class="fas fa-database"></i></div>
+                        <div>
+                            <h4>Data & Systèmes</h4>
+                            <p>SQL • Sécurité • IA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section bg-soft">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="sub-heading">Présentation</span>
+                <h2>À Propos de Moi</h2>
+                <div class="heading-line"></div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-text">
+                    <p>
+                        Étudiante en <strong>Licence Professionnelle Développement et Sécurité</strong>, je combine ma passion pour la programmation avec une approche rigoureuse orientée conception et sécurité informatique.
+                    </p>
+                    <p>
+                        Au fil de ma formation et de mes projets personnels, j’ai acquis une solide expérience dans le cycle de vie logiciel : modélisation UML/Merise, développement backend et frontend, intégration de bases de données relationnelles et principes fondamentaux des réseaux.
+                    </p>
+                </div>
+
+                <div class="about-features">
+                    <div class="about-feat-item">
+                        <div class="feat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4>Formation Spécialisée</h4>
+                            <p>Développement logiciel & sécurité informatique</p>
+                        </div>
+                    </div>
+                    <div class="about-feat-item">
+                        <div class="feat-icon"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <h4>Polyvalence Technique</h4>
+                            <p>Applications complètes de la BDD à l'interface</p>
+                        </div>
+                    </div>
+                    <div class="about-feat-item">
+                        <div class="feat-icon"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h4>Esprit Pratique</h4>
+                            <p>Déploiement rapide de solutions fonctionnelles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="sub-heading">Expertise Technique</span>
+                <h2>Mes Compétences</h2>
+                <div class="heading-line"></div>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-box">
+                    <div class="skill-top">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Développement Web</h3>
+                    </div>
+                    <div class="pills-list">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-top">
+                        <div class="skill-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                        <h3>Développement Mobile</h3>
+                    </div>
+                    <div class="pills-list">
+                        <span>Conception Mobile</span>
+                        <span>Android Studio</span>
+                        <span>UI Mobile</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-top">
+                        <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                        <h3>Langages & POO</h3>
+                    </div>
+                    <div class="pills-list">
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>C</span>
+                        <span>C#</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-top">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h3>Bases de Données</h3>
+                    </div>
+                    <div class="pills-list">
+                        <span>MySQL</span>
+                        <span>SQL Server</span>
+                        <span>Oracle</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-top">
+                        <div class="skill-icon"><i class="fas fa-diagram-project"></i></div>
+                        <h3>Analyse & Agilité</h3>
+                    </div>
+                    <div class="pills-list">
+                        <span>UML</span>
+                        <span>Merise</span>
+                        <span>Scrum</span>
+                        <span>Kanban</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-top">
+                        <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h3>Réseaux & Sécurité</h3>
+                    </div>
+                    <div class="pills-list">
+                        <span>Linux</span>
+                        <span>LAN / WAN</span>
+                        <span>TCP/IP</span>
+                        <span>Sécurité Réseaux</span>
+                        <span>Sécurité Données</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-top">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Data & IA</h3>
+                    </div>
+                    <div class="pills-list">
+                        <span>Machine Learning</span>
+                        <span>Deep Learning</span>
+                        <span>Data Structures</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-top">
+                        <div class="skill-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+                        <h3>Outils & Logiciels</h3>
+                    </div>
+                    <div class="pills-list">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>IntelliJ IDEA</span>
+                        <span>XAMPP</span>
+                        <span>Postman</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section bg-soft">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="sub-heading">Portfolio</span>
+                <h2>Projets Réalisés</h2>
+                <div class="heading-line"></div>
+            </div>
+
+            <div class="projects-list">
+
+                <!-- PROJECT 1 -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <img src="Img/elearning.PNG" alt="Plateforme E-Learning" onerror="this.src='https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=700&q=80'">
+                    </div>
+                    <div class="project-body">
+                        <span class="badge-cat">Application Web</span>
+                        <h3>Plateforme E-Learning</h3>
+                        <p>
+                            Conception et développement complet d'une plateforme d'apprentissage interactif avec gestion avancée des rôles (Admin, Formateurs, Étudiants), suivi de progression et système d'examens modélisé en UML.
+                        </p>
+                        <div class="pills-list">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>PHP POO</span>
+                            <span>MySQL</span>
+                            <span>UML</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/f-ezzahrae1" target="_blank" class="btn-proj">
+                                <i class="fab fa-github"></i> Code Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="project-card reverse">
+                    <div class="project-thumb">
+                        <img src="Img/gestion_logiciel.PNG" alt="Gestion des Logiciels Métiers" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80'">
+                    </div>
+                    <div class="project-body">
+                        <span class="badge-cat">Système d'Entreprise</span>
+                        <h3>Gestion des Logiciels Métiers</h3>
+                        <p>
+                            Solution dédiée à la centralisation du parc applicatif d'entreprise, au suivi des licences et aux habilitations des employés pour garantir la traçabilité et optimiser les ressources informatiques.
+                        </p>
+                        <div class="pills-list">
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>UML</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/f-ezzahrae1" target="_blank" class="btn-proj">
+                                <i class="fab fa-github"></i> Code Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <img src="Img/port.PNG" alt="Portfolio Personnel" onerror="this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=700&q=80'">
+                    </div>
+                    <div class="project-body">
+                        <span class="badge-cat">Frontend & UI/UX</span>
+                        <h3>Portfolio Personnel</h3>
+                        <p>
+                            Création d'une vitrine moderne axée sur l'expérience utilisateur, l'accessibilité sur smartphone, avec gestion de messages via EmailJS et export de base de données instantané.
+                        </p>
+                        <div class="pills-list">
+                            <span>HTML5</span>
+                            <span>CSS3 Responsive</span>
+                            <span>JavaScript Vanilla</span>
+                            <span>EmailJS</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/f-ezzahrae1" target="_blank" class="btn-proj">
+                                <i class="fab fa-github"></i> Code Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="sub-heading">Cursus</span>
+                <h2>Formation Académique</h2>
+                <div class="heading-line"></div>
+            </div>
+
+            <div class="education-grid">
+                
+                <div class="edu-box">
+                    <div class="edu-header">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <span class="edu-years">2025 - Présent</span>
+                    </div>
+                    <h3>Licence Professionnelle</h3>
+                    <p class="edu-field">Développement & Sécurité</p>
+                    <p class="edu-inst"><i class="fas fa-school"></i> IFIAG</p>
+                </div>
+
+                <div class="edu-box">
+                    <div class="edu-header">
+                        <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                        <span class="edu-years">2023 - 2025</span>
+                    </div>
+                    <h3>Technicienne Spécialisée</h3>
+                    <p class="edu-field">Développement Informatique</p>
+                    <p class="edu-inst"><i class="fas fa-school"></i> MIAGE</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section bg-soft">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="sub-heading">Restons Connectés</span>
+                <h2>Contactez-Moi</h2>
+                <div class="heading-line"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                
+                <div class="contact-info-card">
+                    <h3>Discutons de vos projets 🚀</h3>
+                    <p>Je suis toujours ouverte aux opportunités professionnelles, stages ou projets collaboratifs.</p>
+
+                    <div class="contact-links-list">
+                        <a href="mailto:ezzahraefatima979@gmail.com" class="c-link">
+                            <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="c-text">
+                                <small>Email</small>
+                                <span>ezzahraefatima979@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/f-ezzahrae1" target="_blank" class="c-link">
+                            <div class="c-icon"><i class="fab fa-github"></i></div>
+                            <div class="c-text">
+                                <small>GitHub</small>
+                                <span>github.com/f-ezzahrae1</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/fatima-ezzahrae-ait-abdelkader-2a1580362/" target="_blank" class="c-link">
+                            <div class="c-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="c-text">
+                                <small>LinkedIn</small>
+                                <span>Fatima Ezzahrae Ait Abdelkader</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form-card">
+                    <div class="input-field">
+                        <label for="user_name">Votre Nom Complet</label>
+                        <input type="text" id="user_name" name="name" required placeholder="Ex: Sara Alami">
+                    </div>
+
+                    <div class="input-field">
+                        <label for="user_mail">Votre Adresse Email</label>
+                        <input type="email" id="user_mail" name="email" required placeholder="Ex: sara@example.com">
+                    </div>
+
+                    <div class="input-field">
+                        <label for="user_message">Votre Message</label>
+                        <textarea id="user_message" name="message" rows="5" required placeholder="Bonjour Fatima, je vous contacte pour..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Envoyer le Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 Fatima Ezzahrae Ait Abdelkader. Tous droits réservés.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/f-ezzahrae1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/fatima-ezzahrae-ait-abdelkader-2a1580362/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:ezzahraefatima979@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS & Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("HZPg5Ol4H8SNNN5SG");
+      })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
