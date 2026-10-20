@@ -1,25 +1,22 @@
-// ==========================================
-// SELECTORS
-// ==========================================
+if (typeof emailjs !== 'undefined') {
+    emailjs.init("HZPg5Ol4H8SNNN5SG");
+}
+
 const burger = document.getElementById('burger');
 const nav = document.getElementById('navLinks');
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll("section");
-const navbar = document.querySelector(".navbar");
+const contactForm = document.getElementById('contact-form');
 
-// ==========================================
-// 🍔 BURGER MENU (ANTI-BUG MOBILE)
-// ==========================================
+// Menu mobile
 if (burger && nav) {
     burger.addEventListener('click', (e) => {
         e.stopPropagation();
         nav.classList.toggle('nav-active');
         burger.classList.toggle('toggle');
-        // Bloquer le scroll du body quand le menu est ouvert
         document.body.style.overflow = nav.classList.contains('nav-active') ? 'hidden' : 'auto';
     });
 
-    // Fermer le menu si on clique en dehors
     document.addEventListener('click', (e) => {
         if (nav.classList.contains('nav-active') && !nav.contains(e.target) && !burger.contains(e.target)) {
             nav.classList.remove('nav-active');
@@ -29,16 +26,13 @@ if (burger && nav) {
     });
 }
 
-// ==========================================
-// SMOOTH SCROLL & CLOSE MOBILE MENU
-// ==========================================
+// Navigation fluide
 navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
         const href = link.getAttribute("href");
-        if (href.startsWith("#")) {
+        if (href && href.startsWith("#")) {
             e.preventDefault();
 
-            // Fermer le menu burger
             if (nav && burger) {
                 nav.classList.remove('nav-active');
                 burger.classList.remove('toggle');
@@ -47,7 +41,7 @@ navLinks.forEach(link => {
 
             const targetSection = document.getElementById(href.substring(1));
             if (targetSection) {
-                const offset = 80; // Espace pour la navbar
+                const offset = 80;
                 const bodyRect = document.body.getBoundingClientRect().top;
                 const elementRect = targetSection.getBoundingClientRect().top;
                 const elementPosition = elementRect - bodyRect;
@@ -62,9 +56,7 @@ navLinks.forEach(link => {
     });
 });
 
-// ==========================================
-// ACTIVE LINK SUR LE SCROLL
-// ==========================================
+// Gestion du scroll et liens actifs
 window.addEventListener("scroll", () => {
     let current = "";
     sections.forEach(section => {
@@ -82,63 +74,42 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// ==========================================
-// 💾 SQL EXPORT FUNCTION
-// ==========================================
-function downloadSqlFile(name, email, message) {
-    const safeName = (name || '').replace(/'/g, "''");
-    const safeEmail = (email || '').replace(/'/g, "''");
-    const safeMessage = (message || '').replace(/'/g, "''");
-    const currentDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
+// Animation des projets
+const projectElements = document.querySelectorAll(".project-section, .project-card");
+if (projectElements.length > 0) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.15 });
 
-    const sqlContent = `-- Message reçu via Portfolio de Fatima Ezzahrae\n` +
-                       `INSERT INTO contact_messages (nom, email, message, date_envoi)\n` +
-                       `VALUES ('${safeName}', '${safeEmail}', '${safeMessage}', '${currentDate}');\n`;
-
-    const blob = new Blob([sqlContent], { type: 'application/sql;charset=utf-8;' });
-    const downloadUrl = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = downloadUrl;
-    a.download = `contact_${Date.now()}.sql`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(downloadUrl);
+    projectElements.forEach(item => observer.observe(item));
 }
 
-// ==========================================
-// EMAILJS + GESTION FORMULAIRE
-// ==========================================
-const contactForm = document.getElementById('contact-form');
-
+// Envoi du formulaire de contact
 if (contactForm) {
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const btn = contactForm.querySelector('.btn-submit');
+        const btn = contactForm.querySelector('.btn-submit, .form-btn');
         const originalText = btn ? btn.innerHTML : "Envoyer le Message";
 
-        const name = document.getElementById('user_name').value.trim();
-        const email = document.getElementById('user_mail').value.trim();
-        const message = document.getElementById('user_message').value.trim();
-
-        // 1. Télécharger le fichier SQL direct
-        downloadSqlFile(name, email, message);
-
         if (btn) {
-            btn.innerHTML = "<span>Téléchargé ! Envoi en cours... ⏳</span>";
+            btn.innerHTML = "<span>Envoi en cours... ⏳</span>";
             btn.disabled = true;
         }
 
-        // 2. Envoi par EmailJS
-        if (typeof emailjs !== 'undefined') {
-            const serviceID = 'service_1rys38c';
-            const templateID = 'template_osrgezd';
+        const serviceID = 'service_1rys38c';
+        const templateID = 'template_osrgezd';
 
+        if (typeof emailjs !== 'undefined') {
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     if (btn) btn.innerHTML = "<span>Message Envoyé ! ✅</span>";
                     contactForm.reset();
+
                     setTimeout(() => {
                         if (btn) {
                             btn.innerHTML = originalText;
@@ -149,23 +120,64 @@ if (contactForm) {
                 .catch((err) => {
                     console.error("Erreur EmailJS:", err);
                     if (btn) {
-                        btn.innerHTML = "<span>Fichier SQL Téléchargé ! ✅</span>";
-                        contactForm.reset();
-                        setTimeout(() => {
-                            btn.innerHTML = originalText;
-                            btn.disabled = false;
-                        }, 3500);
+                        btn.innerHTML = "<span>Erreur d'envoi ❌</span>";
+                        btn.disabled = false;
                     }
+                    setTimeout(() => {
+                        if (btn) btn.innerHTML = originalText;
+                    }, 3500);
                 });
         } else {
             if (btn) {
-                btn.innerHTML = "<span>Fichier SQL Sauvegardé ! ✅</span>";
-                contactForm.reset();
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.disabled = false;
-                }, 3500);
+                btn.innerHTML = "<span>Erreur de configuration ❌</span>";
+                btn.disabled = false;
             }
         }
     });
 }
+
+// Widget WhatsApp
+document.addEventListener('DOMContentLoaded', () => {
+    const waToggleBtn = document.getElementById('waToggleBtn');
+    const waChatBox = document.getElementById('waChatBox');
+    const waCloseBtn = document.getElementById('waCloseBtn');
+    const waOptBtns = document.querySelectorAll('.wa-opt-btn');
+
+    const phone = "212649702607";
+
+    if (waToggleBtn && waChatBox) {
+        waToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            waChatBox.classList.toggle('active');
+        });
+    }
+
+    if (waCloseBtn && waChatBox) {
+        waCloseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            waChatBox.classList.remove('active');
+        });
+    }
+
+    document.addEventListener('click', (e) => {
+        if (waChatBox && waChatBox.classList.contains('active')) {
+            if (!waChatBox.contains(e.target) && !waToggleBtn.contains(e.target)) {
+                waChatBox.classList.remove('active');
+            }
+        }
+    });
+
+    waOptBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const message = this.getAttribute('data-msg') || "Bonjour Fatima, je vous contacte depuis votre portfolio.";
+            const encodedText = encodeURIComponent(message);
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedText}`;
+
+            waChatBox.classList.remove('active');
+            window.location.href = whatsappURL;
+        });
+    });
+});

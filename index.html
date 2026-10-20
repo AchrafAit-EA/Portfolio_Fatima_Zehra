@@ -6,19 +6,19 @@
     <meta name="description" content="Portfolio de Fatima Ezzahrae - Développeuse Full Stack & Data">
     <title>Fatima Ezzahrae ✦ Développeuse Full Stack & Data</title>
 
-    <!-- Google Fonts -->
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome -->
+    <!-- icônes font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- barre de navigation -->
     <header class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
@@ -46,11 +46,11 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- accueil / hero -->
     <section class="hero" id="home">
         <div class="hero-container">
 
-            <div class="hero-content">
+            <div>
                 <div class="hero-tag-badge">
                     <span class="tag-pulse"></span>
                     <span>Disponible pour de nouveaux projets</span>
@@ -91,13 +91,13 @@
                 </div>
             </div>
 
-            <!-- HERO IMAGE / AVATAR CARD -->
+            <!-- photo de profil -->
             <div class="hero-media">
                 <div class="media-card-wrap">
-                    <!-- Background Soft Blobs -->
+                    <!-- rond décoratif derrière la photo -->
                     <div class="soft-circle-bg"></div>
 
-                    <!-- Floating Card Top -->
+                    <!-- étiquette flottante en haut -->
                     <div class="float-card float-top">
                         <div class="float-icon blue"><i class="fas fa-laptop-code"></i></div>
                         <div>
@@ -106,12 +106,12 @@
                         </div>
                     </div>
 
-                    <!-- Main Image Frame -->
+                    <!-- la photo -->
                     <div class="image-frame">
                         <img src="Img/image.jpeg" alt="Fatima Ezzahrae" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80'">
                     </div>
 
-                    <!-- Floating Card Bottom -->
+                    <!-- étiquette flottante en bas -->
                     <div class="float-card float-bottom">
                         <div class="float-icon amber"><i class="fas fa-database"></i></div>
                         <div>
@@ -125,7 +125,7 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- à propos -->
     <section id="about" class="section bg-soft">
         <div class="container">
             <div class="section-title-wrap">
@@ -171,7 +171,7 @@
         </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- compétences -->
     <section id="skills" class="section">
         <div class="container">
             <div class="section-title-wrap">
@@ -293,7 +293,7 @@
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- projets -->
     <section id="projects" class="section bg-soft">
         <div class="container">
             <div class="section-title-wrap">
@@ -304,7 +304,7 @@
 
             <div class="projects-list">
 
-                <!-- PROJECT 1 -->
+                <!-- projet 1 -->
                 <div class="project-card">
                     <div class="project-thumb">
                         <img src="Img/elearning.PNG" alt="Plateforme E-Learning" onerror="this.src='https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=700&q=80'">
@@ -330,8 +330,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- PROJECT 2 -->
+                <!-- projet 2 -->
                 <div class="project-card reverse">
                     <div class="project-thumb">
                         <img src="Img/gestion_logiciel.PNG" alt="Gestion des Logiciels Métiers" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80'">
@@ -357,7 +356,7 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 3 -->
+                <!-- projet 3 -->
                 <div class="project-card">
                     <div class="project-thumb">
                         <img src="Img/port.PNG" alt="Portfolio Personnel" onerror="this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=700&q=80'">
@@ -386,7 +385,7 @@
         </div>
     </section>
 
-    <!-- EDUCATION SECTION -->
+    <!-- formation -->
     <section id="education" class="section">
         <div class="container">
             <div class="section-title-wrap">
@@ -421,7 +420,7 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- contact -->
     <section id="contact" class="section bg-soft">
         <div class="container">
             <div class="section-title-wrap">
@@ -489,7 +488,7 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- pied de page -->
     <footer class="footer">
         <div class="container footer-content">
             <p>© 2026 Fatima Ezzahrae Ait Abdelkader. Tous droits réservés.</p>
@@ -501,13 +500,69 @@
         </div>
     </footer>
 
-    <!-- EmailJS & Script -->
+    <!-- widget whatsapp -->
+    <div class="wa-widget-container" id="waWidget">
+        
+        <!-- bouton whatsapp -->
+        <button type="button" class="wa-floating-btn" id="waToggleBtn" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="wa-badge-pulse">1</span>
+        </button>
+
+        <!-- fenêtre du chat -->
+        <div class="wa-chat-box" id="waChatBox">
+            
+            <div class="wa-chat-header">
+                <div class="wa-header-user">
+                    <div class="wa-avatar">
+                        <img src="Img/image.jpeg" alt="Fatima" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80'">
+                        <span class="wa-online-dot"></span>
+                    </div>
+                    <div class="wa-user-info">
+                        <h4>Fatima Ezzahrae</h4>
+                        <p><i class="fas fa-circle"></i> En ligne</p>
+                    </div>
+                </div>
+                <button type="button" class="wa-close-btn" id="waCloseBtn">&times;</button>
+            </div>
+
+            <div class="wa-chat-body">
+                <div class="wa-message-bubble">
+                    <p class="wa-msg-text">
+                        Bonjour ! 👋 Je suis Fatima Ezzahrae, titulaire d'une <strong>Licence en Développement & Sécurité</strong>.<br><br>
+                        Cliquez sur votre besoin pour m'envoyer un message direct :
+                    </p>
+                    <span class="wa-msg-time">À l'instant</span>
+                </div>
+
+                <div class="wa-options-title">✦ Choisissez votre option :</div>
+                <div class="wa-options-group">
+                    <button type="button" class="wa-opt-btn" data-msg="Bonjour Fatima, nous souhaitons échanger avec vous concernant une offre d'emploi (CDI / CDD).">
+                        💼 Offre d'Emploi / CDI
+                    </button>
+                    <button type="button" class="wa-opt-btn" data-msg="Bonjour Fatima, nous aimerions vous proposer un Stage pré-embauche dans notre entreprise.">
+                        🎓 Stage Pré-embauche
+                    </button>
+                    <button type="button" class="wa-opt-btn" data-msg="Bonjour Fatima, j'ai une mission / projet Freelance à vous confier.">
+                        💻 Projet Freelance
+                    </button>
+                    <button type="button" class="wa-opt-btn" data-msg="Bonjour Fatima, je souhaite entrer en contact direct avec vous pour un échange professionnel.">
+                        💬 Échange professionnel
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- scripts -->
+    <script src="script.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
       (function(){
           emailjs.init("HZPg5Ol4H8SNNN5SG");
       })();
     </script>
-    <script src="script.js"></script>
 </body>
 </html>

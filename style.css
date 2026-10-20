@@ -1,26 +1,21 @@
-/* ===================================================
-   1. VARIABLES DE COULEURS (Inspirées de l'image)
-   =================================================== */
 :root {
-    /* Palette Principale (Bleu Ciel & Saas Light) */
-    --primary-blue: #0284c7;       /* Bleu principal */
-    --primary-sky: #38bdf8;        /* Sky blue vibrant */
-    --primary-hover: #0369a1;      /* Hover plus foncé */
-    --accent-amber: #f59e0b;       /* Touche dorée/orange subtile */
+    /* couleurs */
+    --primary-blue: #0284c7;       /* bleu principal */
+    --primary-sky: #38bdf8;        /* bleu clair */
+    --accent-amber: #f59e0b;       /* orange */
     --accent-amber-light: #fef3c7;
     
-    /* Fonds & Conteneurs */
+    /* fonds */
     --bg-body: #ffffff;
-    --bg-soft: #f8fafc;            /* Fond doux gris/bleuté */
-    --bg-card: #ffffff;
-    --bg-blue-tint: #f0f9ff;       /* Bleu très clair pour badges/hover */
+    --bg-soft: #f8fafc;            
+    --bg-blue-tint: #f0f9ff;       
 
-    /* Textes */
-    --text-heading: #0f172a;       /* Dark Navy / presque noir */
-    --text-body: #334155;          /* Gris foncé très lisible */
-    --text-muted: #64748b;         /* Gris moyen */
+    /* textes */
+    --text-heading: #0f172a;       
+    --text-body: #334155;          
+    --text-muted: #64748b;         
 
-    /* Bordures & Ombres */
+    /* bordures et ombres */
     --border-color: #e2e8f0;
     --border-focus: #38bdf8;
     --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.04);
@@ -28,7 +23,7 @@
     --shadow-lg: 0 20px 35px -10px rgba(2, 132, 199, 0.12), 0 10px 15px -5px rgba(15, 23, 42, 0.04);
     --shadow-btn: 0 8px 20px -4px rgba(2, 132, 199, 0.35);
 
-    /* Polices */
+    /* polices */
     --font-heading: 'Space Grotesk', -apple-system, sans-serif;
     --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
 
@@ -39,9 +34,7 @@
     --transition: all 0.25s ease-in-out;
 }
 
-/* ===================================================
-   2. RESET & GLOBAL (Prévention des bugs Mobile)
-   =================================================== */
+/* reset + base */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -59,7 +52,7 @@ body {
     color: var(--text-body);
     font-family: var(--font-body);
     line-height: 1.65;
-    overflow-x: hidden; /* Empêche tout décalage sur téléphone */
+    overflow-x: hidden; 
     width: 100%;
 }
 
@@ -80,9 +73,7 @@ img {
     background-color: var(--bg-soft);
 }
 
-/* ===================================================
-   3. HEADER & NAVBAR (Anti-Bug Mobile)
-   =================================================== */
+/* header / navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -189,7 +180,7 @@ img {
     box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
 }
 
-/* Burger Button */
+/* bouton burger */
 .burger {
     display: none;
     background: transparent;
@@ -211,7 +202,7 @@ img {
     transition: var(--transition);
 }
 
-/* Burger Animation quand actif */
+/* burger ouvert */
 .burger.toggle .bar1 {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -222,9 +213,7 @@ img {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ===================================================
-   4. HERO SECTION
-   ================================================== */
+/* hero */
 .hero {
     padding-top: 130px;
     padding-bottom: 70px;
@@ -378,7 +367,7 @@ img {
     background-color: var(--border-color);
 }
 
-/* Hero Media (Image + Floating Cards) */
+/* image hero + cartes */
 .hero-media {
     position: relative;
     display: flex;
@@ -483,9 +472,7 @@ img {
     100% { transform: translateY(-8px); }
 }
 
-/* ===================================================
-   5. SECTIONS GÉNÉRALES
-   =================================================== */
+/* sections */
 .section {
     padding: 85px 0;
 }
@@ -520,9 +507,7 @@ img {
     border-radius: 3px;
 }
 
-/* ===================================================
-   6. ABOUT SECTION
-   =================================================== */
+/* à propos */
 .about-card {
     background: #ffffff;
     border: 1px solid var(--border-color);
@@ -582,9 +567,7 @@ img {
     color: var(--text-muted);
 }
 
-/* ===================================================
-   7. SKILLS SECTION
-   =================================================== */
+/* compétences */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -664,9 +647,7 @@ img {
     border-color: var(--primary-sky);
 }
 
-/* ===================================================
-   8. PROJECTS SECTION
-   =================================================== */
+/* projets */
 .projects-list {
     display: flex;
     flex-direction: column;
@@ -772,9 +753,7 @@ img {
     transform: translateY(-2px);
 }
 
-/* ===================================================
-   9. EDUCATION SECTION
-   =================================================== */
+/* formation */
 .education-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -847,9 +826,7 @@ img {
     gap: 6px;
 }
 
-/* ===================================================
-   10. CONTACT SECTION & FORM
-   =================================================== */
+/* contact + formulaire */
 .contact-wrapper {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -929,7 +906,7 @@ img {
     word-break: break-all;
 }
 
-/* Formulaire */
+/* formulaire */
 .contact-form-card {
     background: #ffffff;
     border: 1px solid var(--border-color);
@@ -1002,9 +979,7 @@ img {
     cursor: not-allowed;
 }
 
-/* ===================================================
-   11. FOOTER
-   =================================================== */
+/* footer */
 .footer {
     padding: 36px 0;
     border-top: 1px solid var(--border-color);
@@ -1048,11 +1023,9 @@ img {
     transform: translateY(-2px);
 }
 
-/* ===================================================
-   12. RESPONSIVE MOBILE & TABLETTE (Correction Totale)
-   =================================================== */
+/* responsive */
 
-/* Tablette (Max 992px) */
+/* tablette */
 @media screen and (max-width: 992px) {
     .hero-container {
         grid-template-columns: 1fr;
@@ -1093,7 +1066,7 @@ img {
     }
 }
 
-/* Smartphone (Max 768px - La partie li kanet kat-khrbeq) */
+/* mobile */
 @media screen and (max-width: 768px) {
     html {
         font-size: 15px;
@@ -1111,7 +1084,7 @@ img {
         display: flex;
     }
 
-    /* Menu mobile qui glisse proprement sans déborder */
+    /* menu mobile */
     .nav-links {
         position: fixed;
         top: 0;
@@ -1158,7 +1131,7 @@ img {
         text-decoration: none;
     }
 
-    /* Hero sur Mobile */
+    /* hero mobile */
     .hero {
         padding-top: 105px;
         padding-bottom: 50px;
@@ -1178,7 +1151,7 @@ img {
         justify-content: center;
     }
 
-    /* Cacher les badges flottants pour que l'image ne prenne pas trop de place et ne déborde pas */
+    /* on cache les cartes flottantes sur mobile */
     .float-card {
         display: none;
     }
@@ -1191,7 +1164,6 @@ img {
         height: 310px;
     }
 
-    /* Sections */
     .section {
         padding: 60px 0;
     }
@@ -1213,4 +1185,200 @@ img {
         text-align: center;
         justify-content: center;
     }
+}
+/* widget whatsapp */
+.wa-widget-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99999;
+}
+
+.wa-floating-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25d366;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.wa-floating-btn:hover {
+    transform: scale(1.08);
+}
+
+.wa-badge-pulse {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+}
+
+.wa-chat-box {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    width: 350px;
+    max-width: calc(100vw - 35px);
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+}
+
+.wa-chat-box.active {
+    display: flex;
+}
+
+.wa-chat-header {
+    background: #075e54;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.wa-header-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wa-avatar {
+    position: relative;
+    width: 42px;
+    height: 42px;
+}
+
+.wa-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+}
+
+.wa-online-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #25d366;
+    border-radius: 50%;
+    border: 2px solid #075e54;
+}
+
+.wa-user-info h4 {
+    font-size: 0.95rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.wa-user-info p {
+    font-size: 0.72rem;
+    color: #d1fae5;
+    margin: 2px 0 0;
+}
+
+.wa-user-info p i {
+    font-size: 6px;
+    color: #25d366;
+}
+
+.wa-close-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 26px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.wa-chat-body {
+    background: #efeae2;
+    padding: 16px;
+    max-height: 380px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.wa-message-bubble {
+    background: #ffffff;
+    padding: 12px 14px;
+    border-radius: 12px 12px 12px 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.wa-msg-text {
+    font-size: 0.88rem;
+    color: #1e293b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.wa-msg-time {
+    display: block;
+    text-align: right;
+    font-size: 0.68rem;
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+.wa-options-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.wa-options-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wa-opt-btn {
+    width: 100%;
+    text-align: left;
+    padding: 11px 14px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0f172a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.wa-opt-btn:hover {
+    background: #e0f2fe;
+    border-color: #38bdf8;
+    color: #0284c7;
+    transform: translateX(4px);
 }
