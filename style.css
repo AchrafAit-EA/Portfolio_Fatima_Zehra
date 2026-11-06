@@ -633,14 +633,13 @@ img {
     transition: var(--transition);
 }
 
-.skill-box:hover .pills-list span {
-    background: #ffffff;
-}
-
-.pills-list span:hover {
-    background: var(--primary-sky);
-    color: #ffffff;
-    border-color: var(--primary-sky);
+/* modifiacation de code css Hover de toutes les badges */
+.skill-box .pills-list span:hover {
+    background-color: #0284c7 !important;
+    color: #ffffff !important;           
+    border-color: #0284c7 !important;
+    transform: translateY(-2px);
+    cursor: default;
 }
 
 /* projets */
